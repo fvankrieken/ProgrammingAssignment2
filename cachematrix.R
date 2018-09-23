@@ -11,10 +11,11 @@
 ##      getInverse: returns value of previously set inverse
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
-    set <- funtion(y) {
+    set <- function(y) {
         x <<- y
         i <<- NULL
     }
+    get <- function() x
     setInverse <- function(inverse) i <<- inverse
     getInverse <- function() i
     list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
